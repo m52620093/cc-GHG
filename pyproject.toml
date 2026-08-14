@@ -1,0 +1,19 @@
+[project]
+name = "cc-ghg"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "m52620093", email = "2101125403ec@cyber-u.ac.jp" }
+]
+requires-python = ">=3.13"
+dependencies = [
+    "openpyxl>=3.1.5",
+]
+
+[project.scripts]
+cc-ghg = "cc_ghg:main"
+
+[build-system]
+requires = ["uv_build>=0.12.4,<0.13.0"]
+build-backend = "uv_build"
