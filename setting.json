@@ -1,0 +1,46 @@
+{
+  "source": {
+    "file_path": "ghgリスト.xlsx",
+    "sheet_name": "Sheet1",
+    "header_row": 12,
+    "data_start_row": 13,
+    "start_column": "C",
+    "end_column": "AI",
+    "columns": {
+      "部材図面": "E",
+      "GHG排出量算定パターン": "F",
+      "登録日時": "I",
+      "GHG排出量単位毎": "Q"
+    }
+  },
+  "pattern_priority": {
+    "rule": "numeric_desc",
+    "order": ["パターン5", "パターン4A", "パターン3", "パターン1"]
+  },
+  "import": {
+    "template_file_path": "PurchasedProductFootprints_Template.xlsx",
+    "sheet_name": "PurchasedProductFootprints",
+    "data_start_row": 4,
+    "column_mapping": {
+      "部材図面": "B",
+      "GHG排出量単位毎": "M"
+    },
+    "fixed_values": {
+      "E": "PRODUOM",
+      "F": "AVD",
+      "I": "2000-01-01",
+      "J": "2027-03-31",
+      "K": 1,
+      "R": "3.01"
+    },
+    "output_file_name": "import_{yyyyMMdd}.xlsx"
+  },
+  "notification": {
+    "interactive_mode": true
+  },
+  "log": {
+    "file_name": "error.log",
+    "max_bytes": 1048576,
+    "backup_count": 5
+  }
+}

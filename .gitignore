@@ -20,3 +20,14 @@ Thumbs.db
 
 # Excel lock files
 ~$*.xlsx
+
+# SSH keys (should not be committed)
+id_ed25519
+id_ed25519.pub
+
+# Runtime-generated files (cc-ghg app)
+error.log*
+/import_[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9].xlsx
+/build/
+/dist/
+*.spec
