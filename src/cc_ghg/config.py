@@ -30,6 +30,7 @@ class ImportConfig:
     column_mapping: dict[str, str] = field(default_factory=dict)
     fixed_values: dict[str, object] = field(default_factory=dict)
     output_file_name: str = "import_{yyyyMMdd}.xlsx"
+    ghg_per_unit_multiplier: float = 1.0
 
 
 @dataclass

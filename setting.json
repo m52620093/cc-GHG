@@ -33,6 +33,7 @@
       "K": 1,
       "R": "3.01"
     },
+    "ghg_per_unit_multiplier": 1000,
     "output_file_name": "import_{yyyyMMdd}.xlsx"
   },
   "notification": {

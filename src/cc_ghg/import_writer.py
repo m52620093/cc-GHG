@@ -28,7 +28,7 @@ def write_import_file(template_path: Path, output_path: Path, config: ImportConf
     for offset, row in enumerate(rows):
         row_idx = config.data_start_row + offset
         ws[f"{mapping['部材図面']}{row_idx}"] = row.part_drawing
-        ws[f"{mapping['GHG排出量単位毎']}{row_idx}"] = row.ghg_per_unit
+        ws[f"{mapping['GHG排出量単位毎']}{row_idx}"] = row.ghg_per_unit * config.ghg_per_unit_multiplier
         for column, value in config.fixed_values.items():
             ws[f"{column}{row_idx}"] = value
 
